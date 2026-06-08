@@ -1,0 +1,139 @@
+{
+  "project_name": "RageMP Web Admin Panel - GTA V RP",
+  "theme": "dark",
+  "archetype": "7 (Electric & Neon - Tactical Gaming Dashboard)",
+  "language": "Romanian",
+  "typography": {
+    "fonts": {
+      "display": "Anton",
+      "heading": "Outfit",
+      "body": "Outfit",
+      "mono": "JetBrains Mono"
+    },
+    "rules": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl font-display uppercase tracking-wider text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]",
+      "h2": "text-2xl sm:text-3xl font-heading font-bold tracking-tight text-white",
+      "h3": "text-xl sm:text-2xl font-heading font-semibold text-zinc-100",
+      "body": "text-sm sm:text-base font-body text-zinc-400",
+      "data": "font-mono text-sm tracking-widest text-[#00E5FF]",
+      "labels": "uppercase text-xs font-bold tracking-[0.2em] text-zinc-500"
+    }
+  },
+  "colors": {
+    "background": {
+      "app": "#050507",
+      "card": "#0A0A0D",
+      "card_hover": "#101015",
+      "surface": "#121217",
+      "glass": "rgba(10, 10, 13, 0.7)"
+    },
+    "text": {
+      "primary": "#FFFFFF",
+      "secondary": "#A1A1AA",
+      "muted": "#52525B",
+      "inverted": "#000000"
+    },
+    "primary": {
+      "base": "#FFD600",
+      "hover": "#FFEA00",
+      "foreground": "#000000"
+    },
+    "accent": {
+      "cyan": "#00E5FF",
+      "red": "#FF3B30",
+      "green": "#00E676",
+      "police_blue": "#0A84FF",
+      "smurd_red": "#FF453A"
+    },
+    "borders": {
+      "default": "rgba(255, 255, 255, 0.05)",
+      "highlight": "rgba(255, 214, 0, 0.4)",
+      "active": "rgba(0, 229, 255, 0.5)"
+    }
+  },
+  "spacing_and_layout": {
+    "dashboard_grid": "grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6",
+    "bento_grid": "grid grid-cols-1 md:grid-cols-8 lg:grid-cols-12 gap-6",
+    "card_padding": "p-6",
+    "container_padding": "px-4 py-6 md:px-8 md:py-12 lg:px-12",
+    "border_radius": "rounded-none sm:rounded-sm",
+    "alignment": "Left-align data and text. Center-align only massive stat numbers."
+  },
+  "surface_strategies": {
+    "header": "Crystal Glass: backdrop-blur-2xl bg-[#050507]/80 border-b border-white/10 z-50 sticky top-0",
+    "cards": "Solid Tactical: bg-[#0A0A0D] border border-white/5. Hover state adds subtle -translate-y-1 and glow border-white/20.",
+    "buttons": "Brutalist Sharp: rounded-none. Primary buttons use bg-[#FFD600] text-black hover:bg-[#FFEA00]. Secondary use transparent bg with border-white/20 hover:border-white/50 hover:text-white.",
+    "console": "Retro-Futurist Terminal: bg-[#050505] border border-[#00E5FF]/30 p-6 shadow-[inset_0_0_20px_rgba(0,229,255,0.05)]",
+    "inputs": "Flat and dark: bg-[#050507] border-white/10 focus:border-[#FFD600] focus:ring-1 focus:ring-[#FFD600] text-white transition-all"
+  },
+  "components": {
+    "ui_library": "shadcn/ui",
+    "tables": "Dense rows for high data visibility. Table headers uppercase and muted. Hovering over a row highlights it with bg-white/5. Data cells use JetBrains Mono.",
+    "badges": "Sharp corners (rounded-sm), strong saturated backgrounds with 20% opacity and solid borders (e.g., bg-red-500/20 border border-red-500 text-red-500 for SMURD).",
+    "tabs": "Underline style with active tab receiving a glowing bottom border of #00E5FF. Inactive tabs are muted gray.",
+    "notifications": "Sonner toasts placed top-right. Styled as GTA in-game phone notifications: dark bg, colored left border (red for error, green for success, cyan for info).",
+    "dialogs": "Dark backdrop blur, modal bg #0A0A0D, sharp borders, clear typography."
+  },
+  "pages": {
+    "dashboard": "Live stats bento grid. Top 4 cards: Jucatori Online, Total Masini, Total Case, Total Afaceri. Large countdown timer for 'Urmatorul PayDay'. Mini live-feed of server events.",
+    "factions": "Grid of faction cards. Factions included: Politia Romana, Politia Locala, Politia Animalelor, SMURD, Clanuri (Europeni, Americani, Rusi, Asiatici, Africani), Vanzatori. Show members count and leader.",
+    "players": "CRUD Table: Jucatori. Columns: ID, Nume, Nivel, Bani, Factiune, Cont Bancar. Filters for online status and faction. Action menu (Dropdown) for edit/ban.",
+    "cars": "Grid of vehicle cards or dense table. Proprietar, Model, Numar Inmatriculare (Plate), Locatie (Map coordinates or Zone).",
+    "houses": "Cards showing exterior/interior placeholder, Nume Proprietar, Adresa, Pret, and interior type.",
+    "businesses": "Data list: Tip Afacere (Gas Station, 24/7, etc.), Proprietar, Venit Zilnic, Status (Deschis/Inchis).",
+    "payday": "Config form for global economy: Taxa Venit (%), Taxa CAS (%), Bonus Factiune. History table of PayDay logs.",
+    "elections": "Voting dashboard. Current President banner with large photo/avatar. Live votes progress bars. Controls for President to set taxes (suma1: 0-5000, suma2: 0-1000).",
+    "console": "Terminal UI for RageMP commands. Shows command docs (/euvotez [nume], /cumparamasina) and server console logs."
+  },
+  "motion": {
+    "hover": "transition-all duration-200 ease-out hover:-translate-y-1",
+    "active": "active:scale-[0.98]",
+    "page_transition": "Simple opacity fade. No heavy animations to keep it feeling like a fast, tactical admin panel.",
+    "alerts": "Slide in from right, swift and snappy."
+  },
+  "media": {
+    "images": {
+      "dashboard_bg": {
+        "url": "https://images.pexels.com/photos/16763422/pexels-photo-16763422.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Night city skyline with glowing lights. Used as a subtle fixed parallax background for the dashboard (opacity 5-10%).",
+        "category": "background"
+      },
+      "faction_police": {
+        "url": "https://images.pexels.com/photos/4267620/pexels-photo-4267620.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Police car at night, use for Police Faction banner/card.",
+        "category": "faction_banner"
+      },
+      "cars_header": {
+        "url": "https://images.pexels.com/photos/17716166/pexels-photo-17716166.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Red sports car at night, use as header/hero image for Personal Cars page.",
+        "category": "page_header"
+      },
+      "street_clans": {
+        "url": "https://images.pexels.com/photos/35894710/pexels-photo-35894710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Street car racing night, use for Clans/Gangs section.",
+        "category": "faction_banner"
+      }
+    }
+  },
+  "icons": {
+    "library": "lucide-react",
+    "rules": "Use sharp, unfilled icons. Default size 20 or 24. Match icon color to text or neon accent. For critical actions use Accent Red (#FF3B30)."
+  },
+  "accessibility_and_testing": {
+    "contrast": "Text over primary yellow (#FFD600) MUST be black. Use APCA contrast rules.",
+    "testing_attributes": "All interactive elements, buttons, nav links, and form inputs MUST include data-testid attribute. Format: data-testid='[action]-[entity]-[type]' (e.g., data-testid='save-payday-button')."
+  },
+  "instructions_to_main_agent": [
+    "1. WEB PANEL: Build the React/Tailwind frontend using Shadcn UI. Override Shadcn defaults in tailwind.config.js to match the dark/neon tactical theme.",
+    "2. WEB PANEL: Do NOT use generic purple/white gradients. Stick to the Asphalt/Cyan/Yellow palette.",
+    "3. WEB PANEL: Install fonts: @fontsource/anton, @fontsource/outfit, @fontsource/jetbrains-mono. Add lucide-react for icons.",
+    "4. WEB PANEL: Ensure the entire interface is in Romanian (e.g., 'Jucatori', 'Factiuni', 'Alegeri').",
+    "5. WEB PANEL: Apply data-testid rigorously across the UI.",
+    "6. GAME SERVER: Implement the backend RageMP server logic (C#/JS) + MySQL database.",
+    "7. GAME SERVER: Build the 9 specific factions: Politia Romana, Politia Locala, Politia Animalelor, SMURD, 5 clanuri (europeni, americani, rusi, asiatici, africani), Vanzatori.",
+    "8. GAME SERVER: Implement personal cars, houses, and businesses systems.",
+    "9. GAME SERVER: Implement hourly PayDay with formula: (lvl * 1000) + random(999), factoring in impozit pe venit, impozit CAS, bonus factiune.",
+    "10. GAME SERVER: Implement Election system /euvotez [nume_jucator] every Sunday.",
+    "11. GAME SERVER: Implement President controls for taxes with strict limits: suma1 (0-5000), suma2 (0-1000)."
+  ]
+}
