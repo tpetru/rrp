@@ -1,0 +1,11 @@
+# Exemplu de adaugat in server.cfg al serverului tau FiveM
+# DUPA ensure-urile QBCore standard
+
+ensure oxmysql
+ensure ox_lib
+ensure qb-core
+
+# ... celelalte resurse QBCore standard ...
+
+# Resurse Romania RP custom
+ensure rrp-core
