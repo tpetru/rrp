@@ -12,6 +12,7 @@ const businesses = require('./businesses');
 const payday = require('./payday');
 const elections = require('./elections');
 const commands = require('./commands');
+const admin = require('./admin');
 
 (async () => {
     try {
@@ -26,6 +27,7 @@ const commands = require('./commands');
         payday.start();
         elections.start();
         commands.register();
+        admin.register();
 
         console.log('===========================================');
         console.log('  Server RageMP RP Romania - PORNIT');

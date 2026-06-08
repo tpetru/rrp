@@ -19,6 +19,7 @@ CREATE TABLE IF NOT EXISTS players (
     pozitie_y FLOAT NOT NULL DEFAULT -2737.0,
     pozitie_z FLOAT NOT NULL DEFAULT 20.0,
     ore_jucate INT NOT NULL DEFAULT 0,
+    admin_level INT NOT NULL DEFAULT 0,
     creat_la DATETIME DEFAULT CURRENT_TIMESTAMP,
     INDEX idx_factiune (factiune_id)
 );
